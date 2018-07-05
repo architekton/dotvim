@@ -49,15 +49,6 @@ let @c = 'i/**/h'
 "autocmd bufwritepost,filewritepost *.c execute "normal ``"
 "au BufRead,BufNewFile *.c,*.h call s:CCodingStyle()
 
-"function s:CCodingStyle()
-"	set tabstop=8
-"	set shiftwidth=8
-"	set softtabstop=8
-"	set textwidth=80
-"	set noexpandtab
-
-"endfunction
-
 "YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 
