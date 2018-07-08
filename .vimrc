@@ -50,7 +50,7 @@ let @c = 'i/**/h'
 "au BufRead,BufNewFile *.c,*.h call s:CCodingStyle()
 
 "YCM
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 "Auto indent pasted text
 nnoremap p p=`]<C-o>
