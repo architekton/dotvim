@@ -35,19 +35,15 @@ set textwidth=80
 set noexpandtab 
 set cino=(0
 
+"Disable viminfo logging
+:set viminfo=
+
 "My preferred commenting style
 autocmd FileType c,cpp setlocal comments=s:/*,m:**,ex:*/
 
 "Leave no more than 1 empty line between entities
 command Q execute "%!cat -s"
 let @c = 'i/**/h'
-
-"au BufNewFile *.c,*.h 0r ~/.vim/templates/c_header.txt
-"au BufNewFile *.c,*.h exe "1," . 10 . "g/File Name:.*/s//File Name:\t\t".expand("%")
-"au BufNewFile *.c,*.h exe "1," . 10 . "g/Version:.*/s//Version:\t\t1.0"
-"au BufWritePre,FileWritePre *.c,*.h exe "normal ma"
-"autocmd bufwritepost,filewritepost *.c execute "normal ``"
-"au BufRead,BufNewFile *.c,*.h call s:CCodingStyle()
 
 "YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
