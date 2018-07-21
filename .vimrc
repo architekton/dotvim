@@ -25,57 +25,58 @@ set autoindent
 set nosmartindent
 set smarttab
 
-set mouse=a
+set mouse=
 
-"Default syntax indentation
+set encoding=utf-8
+
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set textwidth=80
-set noexpandtab 
-set cino=(0
+set expandtab
+set textwidth=79
+"set cino=(0
 
-"Disable viminfo logging
+" Disable viminfo logging
 :set viminfo=
 
-"My preferred commenting style
+" C, cpp commenting style
 autocmd FileType c,cpp setlocal comments=s:/*,m:**,ex:*/
 
-"Leave no more than 1 empty line between entities
+" Tabs
+autocmd FileType c,cpp,java,rust setlocal softtabstop=4 noexpandtab
+
+" Highlight and remove trailing whitespace
+au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au BufWinEnter,InsertEnter,InsertLeave * match ExtraWhitespace /\s\+$/
+au FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :%s/\s\+$//ge
+
+" Leave no more than 1 empty line between entities
 command Q execute "%!cat -s"
 let @c = 'i/**/h'
 
-"YCM
+" YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
-"Auto indent pasted text
+" Auto indent pasted text
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
-"GRUVBOX
-
-"Specific aesthetics
 let g:gruvbox_contrast_dark='hard'
 
-"Set colorscheme and background
-colorscheme gruvbox 
+" Set colorscheme and background
 set background=dark
+colorscheme gruvbox
 
-"VIM AIRLINE
-
-"Theme setting
+" Airline
 let g:airline_theme='aurora'
 
-"Delay between switching modes
-set ttimeoutlen=10 
+" Delay between switching modes
+set ttimeoutlen=10
 
-"Transparent background
+" Transparent background
 hi Normal ctermbg=NONE guibg=NONE
 hi NonText ctermbg=NONE guibg=NONE
 
-"NERD TREE
-
-"Nerd Tree opens when no file specified
+" NerdTree opens when no file specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
