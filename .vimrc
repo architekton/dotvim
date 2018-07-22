@@ -1,19 +1,5 @@
 call pathogen#infect()
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-
-vnoremap <Up> <Nop>
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
 
 filetype plugin indent on
 syntax on
@@ -31,9 +17,10 @@ set encoding=utf-8
 
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 set textwidth=79
-"set cino=(0
+set cino=(0
 
 " Disable viminfo logging
 :set viminfo=
@@ -42,7 +29,7 @@ set textwidth=79
 autocmd FileType c,cpp setlocal comments=s:/*,m:**,ex:*/
 
 " Tabs
-autocmd FileType c,cpp,java,rust setlocal softtabstop=4 noexpandtab
+autocmd FileType c,cpp,make setlocal noexpandtab
 
 " Highlight and remove trailing whitespace
 au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -51,7 +38,6 @@ au FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :%s/\s\+$//ge
 
 " Leave no more than 1 empty line between entities
 command Q execute "%!cat -s"
-let @c = 'i/**/h'
 
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
@@ -80,3 +66,18 @@ hi NonText ctermbg=NONE guibg=NONE
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Disable arrows in all modes
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+vnoremap <Up> <Nop>
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
