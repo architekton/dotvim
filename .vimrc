@@ -59,8 +59,8 @@ let g:airline_theme='aurora'
 set ttimeoutlen=10
 
 " Transparent background
-hi Normal ctermbg=NONE guibg=NONE
-hi NonText ctermbg=NONE guibg=NONE
+hi Normal ctermbg=black guibg=NONE
+hi NonText ctermbg=black guibg=NONE
 
 " NerdTree opens when no file specified
 autocmd StdinReadPre * let s:std_in=1
