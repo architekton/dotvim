@@ -1,6 +1,5 @@
 call pathogen#infect()
 
-
 filetype plugin indent on
 syntax on
 
@@ -22,14 +21,13 @@ set expandtab
 set textwidth=79
 set cino=(0
 
+set foldmethod=syntax
+
 " Disable viminfo logging
 :set viminfo=
 
-" C, cpp commenting style
-autocmd FileType c,cpp setlocal comments=s:/*,m:**,ex:*/
-
 " Tabs
-autocmd FileType c,cpp,make setlocal noexpandtab
+autocmd FileType make setlocal noexpandtab
 
 " Highlight and remove trailing whitespace
 au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -38,9 +36,6 @@ au FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :%s/\s\+$//ge
 
 " Leave no more than 1 empty line between entities
 command Q execute "%!cat -s"
-
-" YCM
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
@@ -65,6 +60,11 @@ hi NonText ctermbg=black guibg=NONE
 " NerdTree opens when no file specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Disable arrows in all modes
 noremap <Up> <Nop>
