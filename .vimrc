@@ -22,6 +22,7 @@ set textwidth=79
 set cino=(0
 
 set foldmethod=syntax
+set foldnestmax=1
 
 " Disable viminfo logging
 :set viminfo=
