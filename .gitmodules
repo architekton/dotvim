@@ -14,3 +14,19 @@
 	path = bundle/ultisnips
     url = https://github.com/SirVer/ultisnips.git
     ignore = dirty
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+    url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+    url = https://github.com/vim-syntastic/syntastic.git
+    ignore = dirty
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+    url = https://github.com/majutsushi/tagbar.git
+    ignore = dirty
+[submodule "bundle/rust"]
+	path = bundle/rust
+    url = https://github.com/rust-lang/rust.vim.git
+    ignore = dirty
