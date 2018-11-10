@@ -19,7 +19,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set textwidth=79
-set cino=(0
+" set cino=(0
 
 set foldmethod=syntax
 set foldnestmax=1
@@ -42,21 +42,17 @@ command Q execute "%!cat -s"
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
-let g:gruvbox_contrast_dark='hard'
-
 " Set colorscheme and background
 set background=dark
 colorscheme gruvbox
-
-" Airline
-let g:airline_theme='aurora'
+let g:gruvbox_contrast_dark='hard'
 
 " Delay between switching modes
 set ttimeoutlen=10
 
 " Transparent background
-hi Normal ctermbg=black guibg=NONE
-hi NonText ctermbg=black guibg=NONE
+" hi Normal ctermbg=None guibg=NONE
+" hi NonText ctermbg=None guibg=NONE
 
 " NerdTree opens when no file specified
 autocmd StdinReadPre * let s:std_in=1
