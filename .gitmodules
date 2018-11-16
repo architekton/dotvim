@@ -2,14 +2,6 @@
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 	ignore = dirty
-[submodule "bundle/vimtex"]
-	path = bundle/vimtex
-	url = https://github.com/lervag/vimtex.git
-	ignore = dirty
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-	ignore = dirty
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
     url = https://github.com/SirVer/ultisnips.git
@@ -18,15 +10,15 @@
 	path = bundle/vim-surround
     url = https://github.com/tpope/vim-surround.git
     ignore = dirty
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-    url = https://github.com/vim-syntastic/syntastic.git
-    ignore = dirty
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-    url = https://github.com/majutsushi/tagbar.git
-    ignore = dirty
 [submodule "bundle/rust"]
 	path = bundle/rust
     url = https://github.com/rust-lang/rust.vim.git
+    ignore = dirty
+[submodule "bundle/ale"]
+	path = bundle/ale
+    url = https://github.com/w0rp/ale.git
+    ignore = dirty
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+    url = https://github.com/tpope/vim-repeat.git
     ignore = dirty
