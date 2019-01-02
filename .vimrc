@@ -1,7 +1,7 @@
 call pathogen#infect()
 
-filetype plugin indent on
 syntax on
+filetype plugin indent on
 
 let mapleader=' '
 
@@ -27,7 +27,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set textwidth=79
 
 " Folding
 set foldmethod=syntax
@@ -47,8 +46,9 @@ set ttyfast
 " Completion
 set completeopt=menu,menuone,preview,noselect,noinsert
 
-" Tabs for makefile
-autocmd FileType make setlocal noexpandtab
+" Custom indentation settings
+autocmd FileType make setlocal ts=8 sw=8 sts=8 noet
+autocmd FileType PKGBUILD setlocal ts=2 sw=2 sts=2 noet
 
 " Highlight and remove trailing whitespace -- redundant because of ale
 au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -88,6 +88,21 @@ set background=dark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 
+" Vim-go
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+
+" Highlight same vars
+let g:go_auto_sameids = 1
+" Auto import
+let g:go_fmt_command = "goimports"
+
 " Ale
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -97,6 +112,9 @@ let g:ale_linters = {
 \   'rust': ['rls', 'cargo']
 \}
 let g:ale_rust_cargo_use_clippy = 1
+
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 
