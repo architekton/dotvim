@@ -47,7 +47,7 @@ set ttyfast
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 " Custom indentation settings
-autocmd FileType make setlocal ts=8 sw=8 sts=8 noet
+autocmd FileType make setlocal ts=8 sw=8 sts=0 noet
 autocmd FileType PKGBUILD setlocal ts=2 sw=2 sts=2 noet
 
 " Highlight and remove trailing whitespace -- redundant because of ale
