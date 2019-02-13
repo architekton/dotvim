@@ -26,3 +26,7 @@
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
     ignore = dirty
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+    url = https://github.com/lervag/vimtex.git
+    ignore = dirty

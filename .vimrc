@@ -85,8 +85,8 @@ noremap <C-h> <C-w>h
 
 " Set colorscheme and background
 set background=dark
-colorscheme iceberg
-" let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 
 hi Normal ctermbg=NONE guibg=NONE
 
