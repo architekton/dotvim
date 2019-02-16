@@ -1,2 +1,7 @@
-# dotvim
-Personal vim configuration files
+# Dotvim
+
+Personal vim configuration files.
+
+## Installation
+
+`git clone --recursive https://github.com/architekton/dotvim.git ~/.vim`
