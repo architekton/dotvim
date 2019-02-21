@@ -109,9 +109,11 @@ let g:go_fmt_command = "goimports"
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
+\   'python': ['yapf'],
 \}
 let g:ale_linters = {
-\   'rust': ['rls', 'cargo']
+\   'rust': ['rls', 'cargo'],
+\   'python': ['flake8'],
 \}
 let g:ale_rust_cargo_use_clippy = 1
 
