@@ -30,3 +30,7 @@
 	path = bundle/vimtex
     url = https://github.com/lervag/vimtex.git
     ignore = dirty
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+    url = https://github.com/davidhalter/jedi-vim.git
+    ignore = dirty
