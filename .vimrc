@@ -126,6 +126,8 @@ noremap <Leader>ad :ALEGoToDefinition<CR>
 noremap <Leader>af :ALEFix<CR>
 noremap <Leader>ah :ALEHover<CR>
 noremap <Leader>ar :ALEFindReferences<CR>
+noremap <Leader>aj :ALENext<CR>
+noremap <Leader>ak :ALEPrevious<CR>
 
 " NerdTree
 let g:NERDTreeWinSize = 50
