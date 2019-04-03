@@ -1,36 +1,36 @@
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-	ignore = dirty
+    path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
 [submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
+    path = bundle/ultisnips
     url = https://github.com/SirVer/ultisnips.git
     ignore = dirty
 [submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
+    path = bundle/vim-surround
     url = https://github.com/tpope/vim-surround.git
     ignore = dirty
 [submodule "bundle/rust"]
-	path = bundle/rust
+    path = bundle/rust
     url = https://github.com/rust-lang/rust.vim.git
     ignore = dirty
 [submodule "bundle/ale"]
-	path = bundle/ale
+    path = bundle/ale
     url = https://github.com/w0rp/ale.git
     ignore = dirty
 [submodule "bundle/vim-repeat"]
-	path = bundle/vim-repeat
+    path = bundle/vim-repeat
     url = https://github.com/tpope/vim-repeat.git
     ignore = dirty
 [submodule "bundle/vim-go"]
-	path = bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
+    path = bundle/vim-go
+    url = https://github.com/fatih/vim-go.git
     ignore = dirty
 [submodule "bundle/vimtex"]
-	path = bundle/vimtex
+    path = bundle/vimtex
     url = https://github.com/lervag/vimtex.git
     ignore = dirty
 [submodule "bundle/jedi-vim"]
-	path = bundle/jedi-vim
+    path = bundle/jedi-vim
     url = https://github.com/davidhalter/jedi-vim.git
     ignore = dirty
