@@ -27,6 +27,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set textwidth=80
 
 " Folding
 set foldmethod=syntax
@@ -43,17 +44,18 @@ set noswapfile
 set ttimeoutlen=10
 set ttyfast
 
+" Text formatting
+" Underline the current line with equal in normal mode
+nnoremap <F5> yyp<c-v>$r=
+nnoremap <F6> 80A-<ESC>0
+nnoremap <F7> 80A=<ESC>0
+
 " Completion
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 " Custom indentation settings
 autocmd FileType make setlocal ts=8 sw=8 sts=0 noet
 autocmd FileType PKGBUILD setlocal ts=2 sw=2 sts=2 et
-
-" Highlight and remove trailing whitespace -- redundant because of ale
-au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au BufWinEnter,InsertEnter,InsertLeave * match ExtraWhitespace /\s\+$/
-au FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :%s/\s\+$//ge
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
@@ -113,7 +115,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'rust': ['rls', 'cargo'],
-\   'python': ['flake8'],
+\   'python': ['pylint'],
 \}
 let g:ale_rust_cargo_use_clippy = 1
 
