@@ -4,11 +4,6 @@
 
 priority -50
 
-
-snippet arg "Function Arguments" i
-${1:a}: ${2:T}${3:, arg}
-endsnippet
-
 snippet || "Closure, anonymous function (inline)" i
 ${1:move }|$2| { $3 }
 endsnippet
@@ -42,18 +37,80 @@ endsnippet
 snippet ifl "If let" b
 if let ${1:Some($2)} {
 	${3://code}
+}
 endsnippet
 
-snippet info "info!" b
-info!("{}", $1);
+snippet fn "pub fn name(?) -> ? {}"
+fn ${1:function_name}($2)${3/..*/ -> /}$3 {
+	${VISUAL}$0
+}
 endsnippet
 
-snippet infod "infod!" b
-info!("{:?}", $1);
+snippet pfn "pub fn name(?) -> ? {}"
+pub fn ${1:function_name}($2)${3/..*/ -> /}$3 {
+	${VISUAL}$0
+}
 endsnippet
 
-snippet de "debug fmt" b
-{:?}
+snippet main "main"
+fn main() {
+	${VISUAL}$0
+}
 endsnippet
 
 
+snippet for "for ... in ..."
+
+endsnippet
+
+snippet ifl "info!" b
+info!("$1"${2/..*/, /}$2);
+endsnippet
+
+snippet pri "print!(..)" b
+print!("$1"${2/..*/, /}$2);
+endsnippet
+
+snippet pln "println!(..)" b
+println!("$1"${2/..*/, /}$2);
+endsnippet
+
+snippet fmt "format!(..)"
+format!("$1"${2/..*/, /}$2);
+endsnippet
+
+snippet ec "extern crate"
+extern crate ${1:sync};
+endsnippet
+
+# Common types
+snippet opt "Option<T>"
+Option<${1:i32}>
+endsnippet
+
+snippet res "Result<T, E>"
+Result<${1:()}, ${2:Box<Error>}>
+endsnippet
+
+# Loops
+snippet loop "loop {}" b
+loop {
+	${0:${VISUAL}}
+}
+endsnippet
+snippet wh "while loop"
+while ${1:condition} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet for "for ... in ... loop"
+for ${1:i} in ${2} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# TODO commenting
+snippet todo "TODO comment"
+// TODO: $0
+endsnippet
