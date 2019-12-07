@@ -57,8 +57,8 @@ autocmd FileType make setlocal ts=8 sw=8 sts=0 noet
 autocmd FileType PKGBUILD setlocal ts=2 sw=2 sts=2 et
 
 " Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+" nnoremap p p=`]<C-o>
+" nnoremap P P=`]<C-o>
 
 " Disable arrows in all modes
 noremap <Up> <Nop>
@@ -114,6 +114,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'rust': ['rls', 'cargo'],
+\   'go': ['gopls'],
 \   'python': ['pylint'],
 \}
 let g:ale_rust_cargo_use_clippy = 1
